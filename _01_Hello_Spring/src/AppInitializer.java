@@ -11,13 +11,15 @@ public class AppInitializer {
         context.register(AppConfig.class);
         context.refresh();
 
+        // Default Bean Id =  Customer -> customer (first letter simple)
         Customer customer1 = (Customer) context.getBean("customer");
-        Customer customer2 = (Customer) context.getBean("customer");
+
+        //Given Bean Id
+        Customer customer2 = (Customer) context.getBean("customer1");
 
         System.out.println(customer1 == customer2);
-
-        ArrayList arrayList = (ArrayList) context.getBean("arrayList");
-        System.out.println(arrayList.size());
+//
+        ArrayList arrayList = (ArrayList) context.getBean("getArrayList");
 
     }
 }

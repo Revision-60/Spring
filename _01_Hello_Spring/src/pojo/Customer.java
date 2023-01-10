@@ -2,6 +2,6 @@ package pojo;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("cus")
 public class Customer {
 }

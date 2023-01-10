@@ -21,7 +21,7 @@ public class AppConfig {
     }
 
     @Bean
-    public ArrayList arrayList(){
+    public ArrayList getArrayList(){
         return new ArrayList();
     }
 
