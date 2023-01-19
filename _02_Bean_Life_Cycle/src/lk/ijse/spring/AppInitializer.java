@@ -16,12 +16,23 @@ public class AppInitializer {
         ctx.register(AppConfig.class);
         ctx.refresh();
 
-        PojoOne pojoOne = (PojoOne) ctx.getBean("pojoOne");
-        System.out.println(pojoOne);
-
 
         ctx.close();
 
     }
+
+
+    /*
+    *           Spring Bean Life Cycle
+    *
+    *               1. Instantiate
+    *               2. Populate Properties
+    *               3. Bean Name Awareness
+    *               4. Bean Factory Awareness
+    *               5. Application Context Awareness
+    *               6. Initializing
+    *               7. Disposable Bean
+    *
+    * */
 
 }
