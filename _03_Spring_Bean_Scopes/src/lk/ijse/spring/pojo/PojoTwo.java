@@ -2,7 +2,6 @@ package lk.ijse.spring.pojo;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
@@ -13,34 +12,34 @@ import org.springframework.stereotype.Component;
  **/
 
 @Component
-public class PojoOne implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+public class PojoTwo implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
 
-    public PojoOne() {
-        System.out.println("PojoOne: Instantiate");
+    public PojoTwo() {
+        System.out.println("PojoTwo: Instantiate");
     }
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("PojoOne: Bean Factory Aware");
+        System.out.println("PojoTwo: Bean Factory Aware");
     }
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("PojoOne: Bean Name Aware");
+        System.out.println("PojoTwo: Bean Name Aware");
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("PojoOne: Disposable");
+        System.out.println("PojoTwo: Disposable");
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("PojoOne: Initializing");
+        System.out.println("PojoTwo: Initializing");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("PojoOne: Application Context Aware");
+        System.out.println("PojoTwo: Application Context Aware");
     }
 }

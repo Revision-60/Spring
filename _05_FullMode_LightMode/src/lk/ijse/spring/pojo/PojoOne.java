@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
  * @since : 0.1.0
  **/
 
-@Component
 public class PojoOne implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
 
     public PojoOne() {
